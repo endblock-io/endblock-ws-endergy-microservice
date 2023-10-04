@@ -6,6 +6,7 @@ require('dotenv').config()
 
 
 const endergy = require('./services/endergy')
+const stakes = require('./services/stakes')
 
 
 const app = express();
@@ -31,13 +32,25 @@ let response = {};
 setInterval(async() => {
     try {
         response = await endergy.endergyData(web3)
-        console.log(response)
+        // console.log(response)
     } catch (error) {
         console.log(error)
     }
      
     
-}, 2500);
+}, 3000);
+
+let responseStakes = {};
+setInterval(async() => {
+    try {
+        responseStakes = await stakes.stakesDatas(web3)
+        console.log(responseStakes)
+    } catch (error) {
+        console.log(error)
+    }
+     
+    
+}, 3000);
 
 io.on('connection', ( socket ) => {
     console.log(socket.id)
@@ -47,7 +60,19 @@ setInterval(async() => {
 
     try {
     io.emit('get-endergy', JSON.stringify(response))
-        console.log(response)
+        // console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+
+}, 2500);
+
+
+setInterval(async() => {
+
+    try {
+    io.emit('get-stakes', JSON.stringify(response))
+        // console.log(response)
     } catch (error) {
         console.log(error)
     }

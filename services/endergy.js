@@ -1,8 +1,3 @@
-
-
-
-
-
 const web3contract  = require('./web3Intancer')
 const abiEnd = require('../contracts/abis/endergyEND.json')
 const abiEth = require('../contracts/abis/endergyETH.json')
