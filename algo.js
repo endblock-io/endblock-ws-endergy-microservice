@@ -1,1 +1,0 @@
-sudo scp -i keypair-endblock.pem /Users/jorgealcazar/Documents/GitHub/endblock-ws-endergy-microservice.zip ec2-user@ec2-18-192-10-122.eu-central-1.compute.amazonaws.com:/tmp/endblock-ws-endergy-microservice.zip
