@@ -60,7 +60,7 @@ setInterval(async() => {
 
     try {
     io.emit('get-endergy', JSON.stringify(response))
-        // console.log(response)
+
     } catch (error) {
         console.log(error)
     }
@@ -71,8 +71,8 @@ setInterval(async() => {
 setInterval(async() => {
 
     try {
-    io.emit('get-stakes', JSON.stringify(response))
-        // console.log(response)
+    io.emit('get-stakes', JSON.stringify(responseStakes))
+
     } catch (error) {
         console.log(error)
     }
