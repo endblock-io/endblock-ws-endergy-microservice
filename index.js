@@ -44,7 +44,7 @@ let responseStakes = {};
 setInterval(async() => {
     try {
         responseStakes = await stakes.stakesDatas(web3)
-        console.log(responseStakes)
+
     } catch (error) {
         console.log(error)
     }

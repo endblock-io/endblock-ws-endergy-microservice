@@ -26,6 +26,10 @@
         80001:'',
         137:'0x02eD1002C4d32e3e156cECd1a9a26B50b2e64449'
     },
+    continuousStakeRareETH:{
+        80001:'',
+        137:'0x57c2921D6B5B2c336Ef829E49f18E5B23Dd8fB85'
+    },
 }
 
 module.exports = {

@@ -3,6 +3,7 @@ const abiContStakeEndEth = require('../contracts/abis/cstk.json')
 const abiContStakeLpEth = require('../contracts/abis/cstk20.json')
 const abiContStakeJuiEth = require('../contracts/abis/cdtk721.json')
 const abiContStakeJuiEthPro = require('../contracts/abis/cstk721P.json')
+const abiContStakeJuiEthRare = require('../contracts/abis/cstk721Rare.json')
 const {addresses} = require('../contracts/addresses')
 
 const chainId = process.env.CHAIN_ID;
@@ -47,6 +48,7 @@ const stakesDatas = async (web3) => {
         stakesData(abiContStakeLpEth,addresses.contStakeLpEth[chainId],web3),
         stakesData(abiContStakeJuiEth,addresses.contStakeJuiEth[chainId],web3),
         stakesData(abiContStakeJuiEthPro,addresses.contStakeJuiEthPro[chainId],web3),
+        stakesData(abiContStakeJuiEthRare,addresses.continuousStakeRareETH[chainId],web3),
 
     ])
     return {
@@ -54,6 +56,7 @@ const stakesDatas = async (web3) => {
         contStakeLpEth:response[1],
         contStakeJuiEth:response[2],
         contStakeJuiEthPro:response[3],
+        contStakeJuiEthRare:response[4],
     }
 
 }
