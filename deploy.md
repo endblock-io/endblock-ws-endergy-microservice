@@ -9,3 +9,10 @@ sudo scp -i key/keypair-endblock.pem /Users/jorgealcazar/Documents/GitHub/endblo
 cp /tmp/endblock-ws-endergy-microservice.zip .
 
 unzip endblock-ws-endergy-microservice.zip
+
+
+pm2 delete stakes-prod 
+pm2 start index.js --name stakes-prod
+
+sudo du -x / | sort -n | tail -40
+df -h
