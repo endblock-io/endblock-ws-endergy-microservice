@@ -36,15 +36,15 @@ buyend.init();
 
 let response = {};
 
-// setInterval(async() => {
-//     try {
-//         response = await endergy.endergyData(web3)
-//         // console.log(response)
-//     } catch (error) {
-//         console.log(error)
-//     }
+setInterval(async() => {
+    try {
+        response = await endergy.endergyData(web3)
+        // console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
      
-// }, 3000);
+}, 3000);
 
 let responseStakes = {};
 // setInterval(async() => {
@@ -61,15 +61,15 @@ io.on('connection', ( socket ) => {
     console.log(socket.id)
 });
 
-// setInterval(async() => {
-//     try {
-//     io.emit('get-endergy', JSON.stringify(response))
+setInterval(async() => {
+    try {
+    io.emit('get-endergy', JSON.stringify(response))
 
-//     } catch (error) {
-//         console.log(error)
-//     }
+    } catch (error) {
+        console.log(error)
+    }
 
-// }, 2500);
+}, 2500);
 
 
 // setInterval(async() => {
