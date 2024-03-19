@@ -4,7 +4,7 @@ const cors = require('cors')
 require('dotenv').config()
 
 
-const buyend = require("./services/buyend");
+// const buyend = require("./services/buyend");
 const endergy = require('./services/endergy')
 const stakes = require('./services/stakes')
 // const autoPool = require('./services/autoPoolAwardSubscriber')
@@ -31,7 +31,7 @@ const web3 = new Web3(process.env.RPC)
 app.use(cors());
 app.use( express.static( __dirname + '/public'))
 
-buyend.init();
+// buyend.init();
 
 
 let response = {};
@@ -39,7 +39,7 @@ let response = {};
 setInterval(async() => {
     try {
         response = await endergy.endergyData(web3)
-        // console.log(response)
+
     } catch (error) {
         console.log(error)
     }
@@ -47,15 +47,15 @@ setInterval(async() => {
 }, 3000);
 
 let responseStakes = {};
-// setInterval(async() => {
-//     try {
-//         responseStakes = await stakes.stakesDatas(web3)
-//     } catch (error) {
-//         console.log(error)
-//     }
+setInterval(async() => {
+    try {
+        responseStakes = await stakes.stakesDatas(web3)
+    } catch (error) {
+        console.log(error)
+    }
      
     
-// }, 3000);
+}, 3000);
 
 io.on('connection', ( socket ) => {
     console.log(socket.id)
@@ -72,15 +72,15 @@ setInterval(async() => {
 }, 2500);
 
 
-// setInterval(async() => {
+setInterval(async() => {
 
-//     try {
-//     io.emit('get-stakes', JSON.stringify(responseStakes))
-//     } catch (error) {
-//         console.log(error)
-//     }
+    try {
+    io.emit('get-stakes', JSON.stringify(responseStakes))
+    } catch (error) {
+        console.log(error)
+    }
 
-// }, 2500);
+}, 2500);
 
 
 

@@ -1,6 +1,6 @@
 const web3contract  = require('./web3Intancer')
-const abiEnd = require('../contracts/abis/endergyEND.json')
-const abiEth = require('../contracts/abis/endergyETH.json')
+const abiEnd = require('../contracts/abis/Endergy1Harvest.json')
+const abiEth = require('../contracts/abis/Endergy1HarvestETH.json')
 
 const {addresses} = require('../contracts/addresses')
 

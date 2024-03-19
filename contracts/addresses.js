@@ -1,34 +1,34 @@
 
  const addresses = {
    endergyEndEth: {
-        80001:'',
-        137:'0x97D57A8C33a131f5805D6D1CeD1C34c21a823121'
+        80001:'0x2Bb728D567d448aeF8Fe37692fF25C65f6c00003',
+        137:''
     },
    endergyEndEnd: {
-        80001:'',
-        137:'0x4D04c744f6B7AC2133BD4b43de98D91A2b32ec33'
+        80001:'0x278a3F99a0A9182c10cB3fE075a4F3C16AD577Dd',
+        137:''
     },
 
 
     contStakeEndEth:{
-        80001:'',
-        137:'0x09EE14634270FDde6A30C34dEdC297150C8f4fCc'
+        80001:'0x5650F94021d18C2387629469203E6d2D84ED0957',
+        137:''
     },
     contStakeLpEth:{
         80001:'',
-        137:'0xcBc742f1BBd336744e239A378833f642C9ca6561'
+        137:''
     },
     contStakeJuiEth:{
-        80001:'',
-        137:'0xc4655ECf5A84e1EB54D5beC68BEA2c7d15387B3F'
+        80001:'0x3e929f7fE3233427b45fb9b9bC2DfCA94390A0ab',
+        137:''
     },
     contStakeJuiEthPro:{
-        80001:'',
-        137:'0x02eD1002C4d32e3e156cECd1a9a26B50b2e64449'
+        80001:'0x1aF753F9F6C8f1c79355D10A75Dd456f0c1D78d0',
+        137:''
     },
     continuousStakeRareETH:{
-        80001:'',
-        137:'0x57c2921D6B5B2c336Ef829E49f18E5B23Dd8fB85'
+        80001:'0x3BeD5dF89f98B42eC701Ac033DFBfF1dc4f3749a',
+        137:''
     },
 }
 

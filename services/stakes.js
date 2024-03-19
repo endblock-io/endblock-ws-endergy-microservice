@@ -1,9 +1,10 @@
 const web3contract  = require('./web3Intancer')
-const abiContStakeEndEth = require('../contracts/abis/cstk.json')
-const abiContStakeLpEth = require('../contracts/abis/cstk20.json')
-const abiContStakeJuiEth = require('../contracts/abis/cdtk721.json')
-const abiContStakeJuiEthPro = require('../contracts/abis/cstk721P.json')
-const abiContStakeJuiEthRare = require('../contracts/abis/cstk721Rare.json')
+const abiContStakeEndEth = require('../contracts/abis/ContinuousStakeETH.json')
+// const abiContStakeLpEth = require('../contracts/abis/cstk20.json')
+const abiContStakeJuiEth = require('../contracts/abis/ContinuousStake721ETH.json')
+const abiContStakeJuiEthPro = require('../contracts/abis/ContinuousStakeLegendariosETH.json')
+const abiContStakeJuiEthRare = require('../contracts/abis/ContinuousStakeRareETH.json')
+
 const {addresses} = require('../contracts/addresses')
 
 const chainId = process.env.CHAIN_ID;
@@ -45,7 +46,7 @@ const stakesDatas = async (web3) => {
     const response = await Promise.all(
         [
         stakesData(abiContStakeEndEth,addresses.contStakeEndEth[chainId],web3),
-        stakesData(abiContStakeLpEth,addresses.contStakeLpEth[chainId],web3),
+        // stakesData(abiContStakeLpEth,addresses.contStakeLpEth[chainId],web3),
         stakesData(abiContStakeJuiEth,addresses.contStakeJuiEth[chainId],web3),
         stakesData(abiContStakeJuiEthPro,addresses.contStakeJuiEthPro[chainId],web3),
         stakesData(abiContStakeJuiEthRare,addresses.continuousStakeRareETH[chainId],web3),
@@ -53,10 +54,10 @@ const stakesDatas = async (web3) => {
     ])
     return {
         contStakeEndEth:response[0],
-        contStakeLpEth:response[1],
-        contStakeJuiEth:response[2],
-        contStakeJuiEthPro:response[3],
-        contStakeJuiEthRare:response[4],
+        // contStakeLpEth:response[1],
+        contStakeJuiEth:response[1],
+        contStakeJuiEthPro:response[2],
+        contStakeJuiEthRare:response[3],
     }
 
 }
