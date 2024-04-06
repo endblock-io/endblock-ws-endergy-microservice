@@ -30,6 +30,10 @@
         80001:'0x3BeD5dF89f98B42eC701Ac033DFBfF1dc4f3749a',
         137:''
     },
+    ProfitHarvest721:{
+        80001:'0x18FE3dAD011CBf045198B8EaeFC1C3c454F63076',
+        137:''
+    },
 }
 
 module.exports = {
