@@ -4,7 +4,7 @@
 // 0x000000000000000000000000de34a68dd306ab49990216b976e7359edd9c4de1
 
 
-const eventJsonInterface = 		{
+const eventJsonInterface = 			{
   "anonymous": false,
   "inputs": [
     {

@@ -39,6 +39,8 @@ const profitHarvestData = async (abi, address, web3) => {
   const contract = await web3contract.getContract(abi, address, web3);
 
   try {
+  // rewardPerBlock = await contract.methods.rewardPerBlock().call();
+console.log(contract.methods)
     rewardBalance = await contract.methods.totRewardAcum().call();
   } catch (error) {
     console.log(error);

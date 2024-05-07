@@ -6,7 +6,7 @@ require("dotenv").config();
 // const buyend = require("./services/buyend");
 const endergy = require("./services/endergy");
 const stakes = require("./services/stakes");
-// const autoPool = require('./services/autoPoolAwardSubscriber')
+const autoPool = require('./services/autoPoolAwardSubscriber')
 // const {addresses} = require('./contracts/v4/addresses')
 
 const app = express();
